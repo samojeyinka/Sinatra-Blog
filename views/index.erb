@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <h1>My Blog</h1>
+  <a href="/posts/new">Create a new post</a>
+  <ul>
+    <% @posts.each do |post| %>
+      <li>
+        <a href="/posts/<%= post.id %>"><%= post.title %></a>
+        <form action="/posts/<%= post.id %>" method="post" style="display:inline">
+          <input type="hidden" name="_method" value="delete">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>

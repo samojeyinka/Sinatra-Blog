@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @post.title %></title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <h1><%= @post.title %></h1>
+  <p><%= @post.body %></p>
+  <a href="/posts/<%= @post.id %>/edit">Edit</a>
+  <a href="/">Back to Home</a>
+</body>
+</html>
